@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+
+        .title-img {
+            padding-left: 2vw;
+            height: 4vh;
+
+        }
+
+        .title-search-bar {
+            padding-right: 18vw;
+        }
+
+        .title-nav {
+            display: flex;
+            align-items: center;
+            margin-top: 2vh;
+        }
+
+        .title-search-bar input {
+            height: 5vh;
+            width: 36vw;
+            margin-left: 14vw;
+            border-top-left-radius: 19px;
+            border-bottom-left-radius: 19px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgb(255, 255, 255, 0.88);
+            /* border: 1px solid black; */
+        }
+
+        .title-search-bar button {
+            border-top-right-radius: 19px;
+            border-bottom-right-radius: 19px;
+            border: 1px solid;
+            width: 4vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .title-search-bar {
+            display: flex;
+
+
+        }
+
+        .title-voice-recognition-button button {
+            height: 6vh;
+            border-radius: 15px;
+            margin-left: 1vw;
+
+
+        }
+
+        .title-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .end-nav-bar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .end-nav-bar button {
+            border-radius: 15px;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 36px;
+            color: rgb(62, 166, 255);
+        }
+
+        .left-nav {
+            /* border: 2px solid; */
+            width: 28vw;
+            /* height: 80vh; */
+            height: 90vh;
+            overflow-y: scroll;
+        }
+
+        .xtx {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 1vh;
+            padding-bottom: 2vh;
+            padding-left: 2vw;
+
+
+        }
+
+        .home {
+            padding-top: 2vh;
+        }
+
+        .xtx img {
+            padding-right: 1vw;
+        }
+
+        .upper-left-nav {
+            border-bottom: 1px solid gray;
+        }
+
+        .hometxt {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 22px;
+            padding-top: 2vh;
+            padding-left: 1vw;
+        }
+
+        .premium-images {
+            height: 4vh;
+        }
+
+        .s {
+            font-family: "Roboto", sans-serif, Arial;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 13px;
+            line-height: 18px;
+            color: #aaa;
+            text-align: center;
+        }
+
+        .mainbody {
+            display: flex;
+            /* border: 1px slid; */
+        }
+
+        .right-nav {
+
+            width: 100vw;
+            /* height: 10vh; */
+        }
+
+        .right-nav nav {
+            margin: 1vw;
+
+        }
+
+        .right-nav nav button {
+            margin-left: 1vw;
+            border-radius: 8px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0.5vw;
+            border: 0.5px solid gray;
+        }
+
+        .card {
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .card img {
+            height: 27vh;
+            width: 25vw;
+            border-radius: 3vh;
+        }
+
+        .videotext {
+            width: 24vw;
+        }
+
+        .videocard {
+            display: flex;
+            gap: 2vw;
+            padding: 1vw;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 22px;
+
+        }
+
+        /*font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(241,241,241);*/
+    </style>
+</head>
+
+<body>
+    <nav class="title-nav">
+        <div class="first-title"> <img src="/assets/3l.svg" alt="">
+            <img class="title-img" src="/assets/title.svg" alt="">
+        </div>
+        <div class="title-search-bar">
+            <input type="text" placeholder="Search ">
+            <button><img src="/assets/search.svg" alt=""></button>
+            <div class="title-voice-recognition-button">
+                <button><img src="/assets/voice-recognition.svg" alt=""></button>
+            </div>
+        </div>
+
+        <div class="end-nav-bar">
+            <img src="/assets/3d.svg" alt="">
+            <button>Sign In</button>
+        </div>
+    </nav>
+    <main class="mainbody">
+        <section class="left-nav">
+            <section class="upper-left-nav">
+                <div class="home xtx">
+                    <img src="/assets/home.svg" alt="">
+                    Home
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/shorts.svg" alt="">
+                    Shorts
+                </div>
+                <div class="subs xtx">
+                    <img src="/assets/subs.svg" alt="">
+                    Subscriptions
+                </div>
+            </section>
+            <section class="upper-left-nav">
+                <div class="home xtx">
+                    <img src="/assets/you.svg" alt="">
+                    You
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/History.svg" alt="">
+                    History
+                </div>
+
+            </section>
+            <section class="upper-left-nav">
+                <div class="home xtx">
+                    Sign in to like videos, comment and subscribe.
+
+                </div>
+
+
+            </section>
+            <section class="upper-left-nav">
+                <div class="hometxt">Explore</div>
+                <div class="home xtx">
+                    <img src="/assets/trending.svg" alt="">
+                    Trending
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/shopping.svg" alt="">
+                    Shopping
+                </div>
+                <div class="home xtx">
+                    <img src="/assets/music.svg" alt="">
+                    Music
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/films.svg" alt="">
+                    Films
+                </div>
+                <div class="home xtx">
+                    <img src="/assets/live.svg" alt="">
+                    Live
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/gaming.svg" alt="">
+                    Gaming
+                </div>
+                <div class="home xtx">
+                    <img src="/assets/news.svg" alt="">
+                    News
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/soprts.svg" alt="">
+                    Sport
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/couse.svg" alt="">
+                    Courses
+                </div>
+                <div class="home xtx">
+                    <img src="/assets/fnb.svg" alt="">
+                    Fashion & beauty
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/podcst.svg" alt="">
+                    Podcasts
+                </div>
+
+            </section>
+            <section class="upper-left-nav">
+                <div class="hometxt">More from YouTube</div>
+                <div class="home xtx">
+                    <img class="premium-images" src="/assets/premium.svg" alt="">
+                    YouTube Premium
+                </div>
+                <div class="shorts xtx">
+                    <img class="premium-images" src="/assets/ymusic.svg" alt="">
+                    YouTube Music
+                </div>
+                <div class="home xtx">
+                    <img class="premium-images" src="/assets/kids.svg" alt="">
+                    YouTube Kids
+                </div>
+
+
+            </section>
+            <section class="upper-left-nav">
+                <div class="hometxt">More from YouTube</div>
+                <div class="home xtx">
+                    <img src="/assets/setting.svg" alt="">
+                    Settings
+                </div>
+                <div class="shorts xtx">
+                    <img src="/assets/histree.svg" alt="">
+                    Report History
+                </div>
+                <div class="home xtx">
+                    <img src="/assets/help.svg" alt="">
+                    Help
+                </div>
+                <div class="home xtx">
+                    <img src="/assets/feed.svg" alt="">
+                    Send Feedback
+                </div>
+
+
+            </section>
+            <section class="s">
+                About Press Copyright Contact us Creator Advertise Developers
+                Terms Privacy Policy & Safety How YouTube works Test new features
+            </section>
+        </section>
+        <section class="right-nav">
+            <nav>
+                <button>All</button>
+                <button>Music</button>
+                <button>Django</button>
+                <button>Web Pages</button>
+                <button>Indian Web Pages</button>
+                <button>Amrinder Gill</button>
+                <button>Data Type</button>
+                <button>Live</button>
+                <button>AI</button>
+                <button>Movie Musical</button>
+
+
+            </nav>
+            <main>
+                <section class="videocard">
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/rSJNAu9kVco/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBzi5hXweX0ikMcb9qauvaocUbC9A"
+                            alt="">
+                        <div class="videotext">
+                            हनुमानजी की SHOCKING बाल लीलाएँ, रावण संग युद्ध🤯 & अयोध्या के क़िस्से |
+                            ft.@shrirasrajjimaharaj by Bhanu Pathak
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/7VEveJz7hdM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAF2o3Hz_egT4HBoUySDu6Eg1-HA"
+                            alt="">
+                        <div class="videotext">
+                            Advance Django Project Course | E-Commerce Shopping Cart | Paytm Integration & 100%
+                            Authentication by ARK PRO CODER
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/cm3oHlk8E5U/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIEwoXzAP&rs=AOn4CLA-pC5sCDs5ZBDWV_soERI2iQw9Ag"
+                            alt="">
+                        <div class="videotext">
+                            Nonstop Romantic Mashup 2024 💚 Best Mashup of Arijit Singh, Jubin Nautiyal,Atif Aslam
+                            ,Darshan Raval by HindiLoveSongs 384 views 10 hours ago 1 hour, 48 minutes
+                        </div>
+
+                    </div>
+                </section>
+                <section class="videocard">
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/fYbCl5_8nDg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAM2FM00QlLoP0yj4oiwWUA_pk-Mg"
+                            alt="">
+                        <div class="videotext">
+                            Diljit Dosanjh - Mombattiye | Harnaaz Sandhu | Jaani | Arvvindr S Khaira | Bunny | Desi
+                            Melodies by DM - Desi Melodies
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/N66T4MmoAbA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_ufZI_s9lTNE1IACOWLKwyJ0dxA"
+                            alt="">
+                        <div class="videotext">
+                            ਸਤਿੰਦਰ ਸਰਤਾਜ ਨਾਲ ਸ਼ਾਇਰਾਨਾ ਪੋਡਕਾਸਟ, About Early Life & Professor To Singer Journey | AK Talk
+                            Show by Anmol Kwatra
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/cpde-lI7_pE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnGI5P4nkG4J6hQGc8nXaSKv9m4Q"
+                            alt="">
+                        <div class="videotext">
+                            WordPress Full Course with Practical (Beginner to Pro) | Create Website with WordPress in
+                            2024 by WsCube Tech
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+        </section>
+    </main>
+</body>
+
+</html>
